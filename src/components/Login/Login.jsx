@@ -1,6 +1,6 @@
 import { Field, Form, Formik } from 'formik';
 
-const Login = () => {
+export const Login = () => {
   const initialValues = {
     email: '',
     password: '',
@@ -22,12 +22,8 @@ const Login = () => {
           </p>
         </div>
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <Formik>
-            <Form
-              initialValues={initialValues}
-              onSubmit={handleSubmit}
-              className="card-body"
-            >
+          <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+            <Form className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -64,5 +60,3 @@ const Login = () => {
     </div>
   );
 };
-
-export default Login;

@@ -3,49 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --red: red;
-}
-
 body {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   font-size: 1.5rem;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-}
-/* .flex{
-  justify-content: center;
-  display: flex;
-  gap:20px;
-} */
-.header {
-  background-color: teal;
-  padding: 10px 20px;
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bold;
-}
-img {
-  display: block;
-  max-width: 100%;
-}
-.background {
-  min-height: 100vh;
-  background: url('https://static.vecteezy.com/system/resources/thumbnails/004/398/834/small/seamless-pattern-of-black-and-white-pizza-repeat-background-with-isolated-monochrome-pizza-pieces-cheese-tomato-pepper-basil-mushroom-sausage-salami-bacon-olive-shrimp-mozzarella-vector.jpg');
-  background-repeat: repeat;
-  background-size: 300px;
 }
