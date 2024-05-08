@@ -1,4 +1,7 @@
+import { usePages } from '../store/hooks';
+
 export const Home = () => {
+  const { setPage } = usePages();
   return (
     <div
       className="hero min-h-screen"
@@ -16,7 +19,14 @@ export const Home = () => {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button
+            onClick={() => {
+              setPage('pizzas');
+            }}
+            className="btn btn-primary"
+          >
+            Get Started
+          </button>
         </div>
       </div>
     </div>
