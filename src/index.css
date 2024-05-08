@@ -1,8 +1,17 @@
-body {
-  font-family: sans-serif;
-  line-height: 1.5;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --red: red;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
 h1,
 h2,
 h3,
@@ -18,8 +27,25 @@ ol {
   margin: 0;
   padding: 0;
 }
-
+/* .flex{
+  justify-content: center;
+  display: flex;
+  gap:20px;
+} */
+.header {
+  background-color: teal;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
 img {
   display: block;
   max-width: 100%;
+}
+.background {
+  min-height: 100vh;
+  background: url('https://static.vecteezy.com/system/resources/thumbnails/004/398/834/small/seamless-pattern-of-black-and-white-pizza-repeat-background-with-isolated-monochrome-pizza-pieces-cheese-tomato-pepper-basil-mushroom-sausage-salami-bacon-olive-shrimp-mozzarella-vector.jpg');
+  background-repeat: repeat;
+  background-size: 300px;
 }
