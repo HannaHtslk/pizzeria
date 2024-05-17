@@ -1,4 +1,20 @@
+import { useEffect } from 'react';
+import { fetchPizzas } from '../services/api';
+import { usePizza } from '../store/hooks';
+import { PizzaList } from '../components/PizzaComponents/PizzaList';
+
 export const Pizzas = () => {
+  const { setPizzas } = usePizza();
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await fetchPizzas();
+
+      setPizzas(data);
+    };
+    getData();
+  }, [setPizzas]);
+
   return (
     <div
       className="hero min-h-screen"
@@ -9,7 +25,7 @@ export const Pizzas = () => {
     >
       <div className="hero-overlay bg-opacity-45"></div>
       <div>
-        <h1>Welcome to our Pizzeria</h1>
+        <PizzaList />
       </div>
     </div>
   );

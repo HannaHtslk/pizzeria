@@ -1,6 +1,11 @@
 import { useContext } from 'react';
 import { PageContext } from './PageProvider';
 import { AuthContext } from './AuthProvider';
+import { PizzaContext } from './PizzaProvider';
 
-export const usePages = () => useContext(PageContext);
+export const usePages = () => {
+  const context = useContext(PageContext);
+  return context;
+};
 export const useAuth = () => useContext(AuthContext);
+export const usePizza = () => useContext(PizzaContext);
