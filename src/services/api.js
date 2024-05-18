@@ -5,3 +5,7 @@ export const fetchPizzas = async () => {
 
   return data;
 };
+
+export const checkout = async data => {
+  await axios.post('http://localhost:1999/orders', data);
+};

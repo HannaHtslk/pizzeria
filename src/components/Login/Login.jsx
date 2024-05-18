@@ -1,6 +1,5 @@
 import { Field, Form, Formik } from 'formik';
 import { useAuth } from '../../store/hooks';
-import { toast } from 'react-toastify';
 
 export const Login = () => {
   const { login } = useAuth();
@@ -10,12 +9,14 @@ export const Login = () => {
   };
 
   const handleSubmit = values => {
-    if (values.email === 'admin@gmail.com' && values.password === 'admin') {
-      login(values);
-      toast.success('Welcome admin!');
-      return;
-    }
-    toast.error('Invalid data!');
+    return login(values);
+
+    // if (values.email === 'admin@gmail.com' && values.password === 'admin') {
+    //   login(values);
+    //   toast.success('Welcome admin!');
+    //   return;
+    // }
+    // toast.error('Invalid data!');
   };
   return (
     <div className="hero min-h-screen bg-base-200">

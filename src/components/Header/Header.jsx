@@ -11,6 +11,9 @@ export const Header = () => {
         <button onClick={() => setPage('home')}>Home</button>
         <button onClick={() => setPage('pizzas')}>Pizzas</button>
         <button onClick={() => setPage('cart')}>Cart</button>
+        {user.email === 'admin@gmail.com' && user.password === 'admin' && (
+          <button onClick={() => setPage('cart')}>Admin panel</button>
+        )}
         <button className="btn " onClick={logout}>
           Logout
         </button>
